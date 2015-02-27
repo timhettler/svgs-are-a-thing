@@ -1,0 +1,47 @@
+<section class="step">
+  <div class="step__body">
+    <h1 class="slide-title">The &lt;symbol&gt; element</h1>
+    <p>This element allows you to define multiple, independent symbols that are not rendered onto the page until they are referenced by the &lt;use&gt; element</p>
+    <div class="grid">
+      <div class="grid__item grid__item--w40">
+        <div class="">
+          <pre><code class="language-markup">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+  &lt;symbol viewBox=&quot;20.586 19.434 32 32&quot; id=&quot;icon-facebook&quot;&gt;
+    &lt;path d=&quot;M36.586,19.434c-8.836,0-16,7.164-16,16s7.164,16,16,16c8.837,0,16-7.162,16-16C52.586,26.598,45.423,19.434,36.586,19.434z
+     M40.016,35.438h-2.242c0,3.584,0,7.996,0,7.996H34.45c0,0,0-4.367,0-7.996h-1.58v-2.823h1.58v-1.828c0-1.31,0.62-3.354,3.354-3.354
+    l2.461,0.01v2.742c0,0-1.496,0-1.787,0s-0.705,0.146-0.705,0.771v1.66h2.533L40.016,35.438z&quot;/&gt;
+  &lt;/symbol&gt;
+  &lt;symbol viewBox=&quot;0 0 361.8 361.8&quot; id=&quot;icon-instagram&quot;&gt;
+    &lt;path d=&quot;M291.6,0.5H70.2C31.8,0.5,0.5,31.8,0.5,70.2v73.6v147.7
+    c0,38.4,31.3,69.7,69.7,69.7h221.3c38.4,0,69.7-31.3,69.7-69.7V143.9V70.2C361.3,31.8,330,0.5,291.6,0.5z M311.5,42.1l8,0V50v53.2
+    l-61,0.2l-0.2-61.1L311.5,42.1z M129.4,143.9c11.6-16,30.3-26.5,51.5-26.5s39.9,10.5,51.5,26.5c7.5,10.4,12,23.2,12,37
+    c0,35-28.5,63.5-63.5,63.5c-35,0-63.5-28.5-63.5-63.5C117.4,167.1,121.9,154.3,129.4,143.9z M326.1,291.6
+    c0,19.1-15.5,34.6-34.6,34.6H70.2c-19.1,0-34.6-15.5-34.6-34.6V143.9h53.9c-4.7,11.4-7.3,23.9-7.3,37c0,54.4,44.3,98.7,98.7,98.7
+    c54.4,0,98.7-44.3,98.7-98.7c0-13.1-2.6-25.6-7.3-37h53.9V291.6z&quot;/&gt;
+  &lt;/symbol&gt;
+&lt;/svg&gt;</svg>
+          </code></pre>
+        </div>
+      </div>
+      <div class="grid__item grid__item--w40">
+        <div class="">
+          <pre><code class="language-markup">&lt;svg class="icon"&gt;
+  &lt;use xlink:href="#icon-facebook" /&gt;
+&lt;/svg&gt;</code></pre>
+        </div>
+        <svg class="centered-image step-6-icon">
+          <use xlink:href="#icon-facebook" />
+        </svg>
+        <div class="">
+          <pre><code class="language-markup">&lt;svg class="icon"&gt;
+  &lt;use xlink:href="#icon-instagram" /&gt;
+&lt;/svg&gt;</code></pre>
+        </div>
+        <svg class="centered-image step-6-icon">
+          <use xlink:href="#icon-instagram" />
+        </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

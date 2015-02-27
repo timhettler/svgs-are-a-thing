@@ -1,0 +1,44 @@
+html,
+body,
+.step {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.step {
+  @include absolute-position(0,0);
+  align-items: center;
+  background-color: oldlace;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  transition: all 400ms;
+
+  &.is-past {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  &.is-current {
+    transition-delay: 200ms;
+  }
+
+  &.is-upcoming {
+    transform: translateX(100%);
+  }
+
+  &__body {
+    position: relative;
+    width: 95%;
+    height: 95%;
+  }
+}
+
+.slide-title {
+  text-align: center;
+}
+
+.slide-sub-title {
+  text-align: center;
+}

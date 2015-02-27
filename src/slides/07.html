@@ -1,0 +1,43 @@
+<section class="step">
+  <div class="step__body">
+    <h1 class="slide-title">Styling Symbols</h1>
+    <p class="slide-sub-title">Styling is limited to properties that inherit, or the SVG element itself.</p>
+    <div class="grid grid--vcenter">
+      <div class="grid__item grid__item--w40">
+        <pre><code class="language-scss">
+          svg {
+            fill: DarkOrchid;
+            transition: fill 250ms;
+
+            &:hover {
+              fill: MediumVioletRed;
+            }
+          }
+        </code></pre>
+      </div>
+      <div class="grid__item grid__item--w40">
+        <svg class="centered-image step-7-icon">
+          <use xlink:href="#icon-instagram" />
+        </svg>
+      </div>
+    </div>
+    <div class="grid grid--vcenter">
+      <div class="grid__item grid__item--w40">
+        <pre><code class="language-scss">
+          height: 50px;
+          width: 50px;
+          transition: transform 250ms;
+
+          &:hover {
+            transform: rotate(180deg);
+          }
+        </code></pre>
+      </div>
+      <div class="grid__item grid__item--w40">
+        <svg class="centered-image step-7-arrow">
+          <use xlink:href="#icon-arrow" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>

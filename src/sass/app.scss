@@ -1,0 +1,220 @@
+//@import "meyer-reset/_reset.scss";
+@import "utilities/_placeholders.scss";
+@import "utilities/_mixins.scss";
+@import "utilities/_boxSize.scss";
+
+@import "_zIndex.scss";
+
+@import "_slides.scss";
+@import "_grid.scss";
+
+img {
+  max-width: 100%;
+}
+
+a {
+  &,
+  &:link,
+  &:hover,
+  &:focus,
+  &:active {
+    color: deeppink;
+  }
+}
+
+.centered-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.t-center {
+  text-align: center;
+}
+
+// svg {
+//   fill: currentColor;
+//   height: 100%;
+//   width: 100%;
+// }
+
+@keyframes coin-1 {
+  0% {
+    transform: translateY(-50px);
+  } 50% {
+    transform: translateY(50px);
+  } 100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes coin-2 {
+  0% {
+    transform: translateY(-45px);
+  } 50% {
+    transform: translateY(60px);
+  } 100% {
+    transform: translateY(60px);
+  }
+}
+
+@keyframes coin-3 {
+  0% {
+    transform: translateY(-80px);
+  } 50% {
+    transform: translateY(20px);
+  } 100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(0);
+  } 5% {
+    transform: scale(1);
+  } 100% {
+    transform: scale(1);
+  }
+}
+
+.animation-svg-container {
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 50vw;
+}
+
+#animation-svg {
+  height: 50vh;
+  width: 50vw;
+}
+
+  #coin-1 {
+    animation: coin-1 4s ease-in infinite;
+    animation-delay: -800ms;
+  }
+
+  #coin-2 {
+    animation: coin-2 3s ease-in infinite;
+    animation-delay: -1000ms;
+  }
+
+  #coin-3 {
+    animation: coin-3 2.5s ease-in infinite;
+    animation-delay: -1500ms;
+  }
+
+  #eye {
+    animation: blink 5s steps(2) infinite;
+  }
+
+  #pig-body {
+    fill: #fff;
+    transition: fill 150ms;
+
+    #piggy &:hover {
+      fill: pink;
+    }
+  }
+
+.code-sample-container {
+  height: 30vh;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.example-icon {
+  display: block;
+  margin: 1.5vh auto;
+
+  &--small {
+    width: 175px;
+  }
+
+  &--large {
+    width: 500px;
+  }
+}
+
+.step-6-icon {
+  margin: {
+    top: 1.5vh;
+    bottom: 1.5vh;
+  }
+}
+
+.step-7-icon {
+  fill: DarkOrchid;
+  transition: fill 250ms;
+
+  &:hover {
+    fill: MediumVioletRed;
+  }
+}
+
+.step-7-arrow {
+  height: 50px;
+  width: 50px;
+  transition: transform 250ms;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+.step-8-img {
+  box-sizing: border-box;
+  display: block;
+  padding: 0 1.5vw;
+}
+
+.step-9-code {
+  margin-right: 0.5vw;
+}
+
+.step-10 {
+  font-size: 22px;
+}
+
+@keyframes bob-color {
+    0% {
+        color: DeepPink;
+    }
+    33% {
+        color: Chocolate;
+    }
+    66% {
+        color: Magenta;
+    }
+    100% {
+      color: LightBlue;
+    }
+}
+
+@keyframes bob-dropshadow {
+    0% {
+        filter: drop-shadow(0px 0px 5px black);
+    }
+    33% {
+       filter: drop-shadow(20px 20px 5px black);
+    }
+    66% {
+        filter: drop-shadow(-20px 40px 5px black);
+    }
+    100% {
+      filter: drop-shadow(0px 0px 5px black);
+    }
+}
+
+
+.bob {
+  animation: bob-color 1s infinite alternate, bob-dropshadow 5s infinite;
+  height: 500px;
+  width: 500px;
+
+  svg {
+    fill: currentColor;
+    height: 100%;
+    width: 100%;
+  }
+}

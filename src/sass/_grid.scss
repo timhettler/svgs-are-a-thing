@@ -1,0 +1,19 @@
+.grid {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  &--vcenter {
+    align-items: center;
+  }
+
+  &__item {
+    &--fill {
+      flex: 1 0 0;
+    }
+
+    &--w40 {
+      flex: 0 0 40%;
+    }
+  }
+}

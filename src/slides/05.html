@@ -1,0 +1,43 @@
+<section class="step">
+  <div class="step__body">
+    <h1 class="slide-title">SVGs as icons</h1>
+    <div class="grid">
+      <div class="grid__item grid__item--full"><img src="assets/svg/facebook.svg" alt="" class="example-icon example-icon--small"></div>
+      <div class="grid__item grid__item--full"><img src="assets/svg/instagram.svg" alt="" class="example-icon example-icon--small"></div>
+      <div class="grid__item grid__item--full"><img src="assets/svg/vimeo.svg" alt="" class="example-icon example-icon--small"></div>
+      <div class="grid__item grid__item--full"><img src="assets/svg/twitter.svg" alt="" class="example-icon example-icon--small"></div>
+    </div>
+    <div class="grid">
+      <div class="grid__item grid__item--w40">
+        <p><b>Inline SVG</b></p>
+        <pre><code class="language-markup">
+&lt;svg version=&quot;1.1&quot; id=&quot;animation-svg&quot; 
+xmlns=&quot;http://www.w3.org/2000/svg&quot; 
+xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot;
+y=&quot;0px&quot; width=&quot;162px&quot; height=&quot;162px&quot; 
+viewBox=&quot;0 0 162 162&quot; enable-background=&quot;new 0 0 162 162&quot; 
+xml:space=&quot;preserve&quot;&gt;
+...
+&lt;/svg&gt;
+        </code></pre>
+        <ul>
+          <li>Not DRY</li>
+          <li>Bloats page</li>
+        </ul>
+      </div>
+      <div class="grid__item grid__item--w40">
+        <p><b>SVG as IMG element</b></p>
+        <pre><code class="language-markup">
+        &lt;img src="assets/svg/facebook.svg" alt=""&gt;
+        </code></pre>
+        <pre><code class="language-css">
+        background-image: url(assets/svg/facebook.svg);
+        </code></pre>
+        <ul>
+          <li>Increases number of HTTP requests</li>
+          <li>Cannot be manipulated with CSS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+<section class="step">
+  <div class="step__body">
+    <h1 class="slide-title">Integrating SVGs Into Your Workflow</h1>
+    <div class="grid">
+      <div class="grid__item grid__item--fill">
+        <p><b>1. Minify all images, including SVG</b></p>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-imagemin">GRUNT-CONTRIB-IMAGEMIN</a></p>
+        <div class="step-9-code">
+        <pre><code class="language-javascript">imagemin: {
+  app: {
+    files: [{
+      expand: true,
+      cwd: 'src/',
+      src: 'assets/svg/*.svg',
+      dest: 'build/'
+    }]
+  }
+},</code></pre>
+      </div>
+      </div>
+      <div class="grid__item grid__item--fill">
+        <p><b>2. Merge a folder of SVGs into a single file with SYMBOLs</b></p>
+        <p><a href="https://github.com/FWeinb/grunt-svgstore/">GRUNT-CONTRIB-SVGSTORE</a></p>
+        <div class="step-9-code">
+        <pre><code class="language-javascript">svgstore: {
+  options: {
+    prefix : 'icon-',
+    cleanup: ['fill'],
+    svg: {
+      style : 'width:0;height:0;visibility:hidden;'
+    }
+  },
+  dev: {
+    files: {
+      '<%= build_dir %>/assets/svg/icons.svg': ['src/assets/svg/*.svg'],
+    },
+  },
+},</code></pre>
+      </div>
+      </div>
+      <div class="grid__item grid__item--fill">
+        <p><b>3. Add the SVG as the first element in your BODY</b></p>
+        <p>Via partials or JavaScript</p>
+        <div class="step-9-code">
+        <pre><code class="language-javascript">var request = new XMLHttpRequest();
+
+request.open('GET', 'assets/svg/icons.svg', true);
+
+request.onload = function() {
+  if (this.status >= 200 && this.status < 400) {
+    $('body').prepend(this.response);
+  }
+};
+
+request.send();</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
